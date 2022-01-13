@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<style>
+	
+	/*assign full width inputs*/
+	input[type=text],
+	input[type=password]
+   
+    {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+	}
+    input[type=email] 
+        {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		box-sizing: border-box;}
+            input[type= number] 
+        {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		box-sizing: border-box;}
+            input[type=date] 
+        {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		box-sizing: border-box;}
+        
+	
+	/*set a style for the buttons*/
+	button { 
+    position:center;
+		background-color: #4CAF50;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		cursor: pointer;
+		width: 100%;
+	}
+    
+	
+	/* set a hover effect for the button*/
+	button:hover {
+		opacity: 0.8;
+	}
+	
+	/*set extra style for the cancel button*/
+	.cancelbtn {
+		width: auto;
+		padding: 10px 18px;
+		background-color: #f44336;
+	}
+	
+	/*centre the display image inside the container*/
+	.imgcontainer {
+		text-align: center;
+		margin: 24px 0 12px 0;
+		position: relative;
+	}
+	
+	/*set image properties*/
+	img.avatar {
+		width: 60%;
+		border-radius: 80%;
+	}
+	
+	/*set padding to the container*/
+	.container {
+		padding: 16px;
+	}
+	
+	/*set the forgot password text*/
+	span.psw {
+		float: right;
+		padding-top: 16px;
+	}
+	
+    #heading{ }
+	/*set the Modal background*/
+	.modal {
+		display: none;
+		position: fixed;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgb(0, 0, 0);
+		background-color: rgba(0, 0, 0, 0.4);
+		padding-top: 60px;
+	}
+	
+	/*style the model content box*/
+	.modal-content {
+		background-color: #fefefe;
+		margin: 5% auto 15% auto;
+		border: 1px solid #888;
+		width: 80%;
+	}
+
+
+input[type=button] {
+  background-color: #04AA6D;
+  color: white;
+  margin:4px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: #45a049;
+}
+
+
+	
+	/*style the close button*/
+	.close {
+		position: absolute;
+		right: 25px;
+		top: 0;
+		color: #000;
+		font-size: 35px;
+		font-weight: bold;
+	}
+	
+	.close:hover,
+	.close:focus {
+		color: red;
+		cursor: pointer;
+	}
+	
+	/* add zoom animation*/
+	.animate {
+		-webkit-animation: animatezoom 0.6s;
+		animation: animatezoom 0.6s
+	}
+	
+	@-webkit-keyframes animatezoom {
+		from {
+			-webkit-transform: scale(0)
+		}
+		to {
+			-webkit-transform: scale(1)
+		}
+	}
+	
+	@keyframes animatezoom {
+		from {
+			transform: scale(0)
+		}
+		to {
+			transform: scale(1)
+		}
+	}
+	
+	@media screen and (max-width: 300px) {
+		span.psw {
+			display: block;
+			float: none;
+		}
+		.cancelbtn {
+			width: 100%;
+		}
+	}
+</style>
+
+<body>
+
+	<h2>Minddeft Login Form</h2>
+	<!--Step 1 : Adding HTML-->
+	<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">ENTER TO FILL FORM </button>
+
+	<div id="id01" class="modal">
+
+		<form class="modal-content animate" action="/action_page.php">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+				<img src=
+"https://minddeft.com/images/minddeft-logo-black.png" alt="Avatar" class="avatar">
+			</div>
+
+			<div class="container">
+            
+            <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interview Form</title>
+    
+</head>
+
+<body>
+    <div id="heading">Minddeft Interview Registration Form<hr></div>
+    <div id="form-div">
+        <form action="" id="form" method="post">
+            <label class="label">First Name</label>
+            <input type="text" name="fname" placeholder="Enter First Name..." id="fname" />
+            <label class="label">Last Name</label>
+            <input type="text" name="lname" placeholder="Enter Last Name..." id="lname" /><br />
+            <label for="">Email Address</label>
+            <input type="email" name="email" placeholder="Enter Email Address..." id="email" /><br />
+            <label for="">Contact Number</label>
+            <input type="number" name="contact" placeholder="Enter phone number..." id="contact" /><br />
+            <label for="">DOB</label>
+            <input type="date" name="dob" id="dob" placeholder="Enter date of birth..." /><br />
+            <label for="">Gender</label> <input type="radio" name="gender" value="Male" /><label for="">Male</label>
+            <input type="radio" name="gender" value="Female" /><label for="">Female</label> <br />
+           
+
+		   <label for="">Select Highest Qualification </label>
+            <select id="hq" name="hq">
+                <option value="" disabled selected>Select highest Qualification</option>
+                <option value="High School"> diploma</option>
+                <option value="Intermediate School">Intermediate School</option>
+                <option value="Diploma"> High School</option>
+                <option value="Graduation">Graduation</option>
+                <option value="Post-Graduation">Post-Graduation</option>
+            </select>
+            
+            <br />
+
+            <input type="button" value="submit" id="submit" />
+        </form>
+        </fieldset>
+        </legend>
+        <div id="edittable" style="display: none">
+            <form method="post" action="">
+                <span><input class="edit" type="number" id="index" hidden /></span>
+                <span><input class="edit" type="text" id="efname" /></span>
+                <span><input class="edit" type="text" id="elname" /></span>
+                <span><input class="edit" type="text" id="eemail" /></span>
+                <span><input class="edit" type="text" id="econtact" /></span>
+                <span><input class="edit" type="text" id="edob" /></span>
+                <span><input class="edit" type="text" id="egender" /></span>
+                <span><input class="edit" type="text" id="ehq" /></span>
+                <span>
+                    <input type="button" value="Update" id="updateData"></input>
+                </span>
+            </form>
+        </div>
+        <table style="width: 82%;" id="dtable"></table>
+        
+        <script> 
+
+let detail = [];
+
+//gender function is used for get the value from radio button
+function gender() {
+  let res = document.getElementsByName("gender");
+  for (let i = 0; i < res.length; i++) {
+    if (res[i].checked) {
+      res = res[i].value;
+    }
+  }
+  return res;
+}
+
+//function execute when submit button clicked
+document.getElementById("submit").onclick = function () {
+  //insert object into array
+  detail.push({
+    fname: document.getElementById("fname").value,
+    lname: document.getElementById("lname").value,
+    email: document.getElementById("email").value,
+    contact: document.getElementById("contact").value,
+    dob: document.getElementById("dob").value,
+    gender: gender(),
+    hq: document.getElementById("hq").value,
+  });
+
+  //call display function;
+  displayData();
+};
+
+//function used to display data in the table
+function displayData() {
+  let str = "";
+  detail.map((item, index) => {
+    str += `<tr key =${index}><td>${item.fname}</td><td>${item.lname}</td><td>${item.email}</td><td>${item.contact}</td><td>${item.dob}</td>
+                  <td>${item.gender}</td><td>${item.hq}</td><td><button onclick="editData(${index})">Edit</button></td>
+                  <td><button onclick="deleteData(${index})">Delete</button></td></tr>`;
+  });
+  console.log(str);
+  document.getElementById("dtable").innerHTML = str;
+}
+
+//function used for delete perticular element in array
+function deleteData(index) {
+  document.getElementById("edittable").style.display = "none";
+  let temp = [];
+  for (let i = 0; i < detail.length; i++) {
+    if (i != index) {
+      temp.push(detail[i]);
+    }
+  }
+  detail = temp;
+  displayData();
+}
+
+//editData function used for edit existing info
+function editData(index) {
+  document.getElementById("edittable").style.display = "block";
+  document.getElementById("index").value = index;
+  document.getElementById("efname").value = detail[index].fname;
+  document.getElementById("elname").value = detail[index].lname;
+  document.getElementById("eemail").value = detail[index].email;
+  document.getElementById("econtact").value = detail[index].contact;
+  document.getElementById("edob").value = detail[index].dob;
+  document.getElementById("egender").value = detail[index].gender;
+  document.getElementById("ehq").value = detail[index].hq;
+}
+
+//this is used to update changes
+document.getElementById("updateData").onclick = function () {
+  let i = document.getElementById("index").value;
+  detail[i].fname = document.getElementById("efname").value;
+  detail[i].lname = document.getElementById("elname").value;
+  detail[i].email = document.getElementById("eemail").value;
+  detail[i].contact = document.getElementById("econtact").value;
+  detail[i].dob = document.getElementById("edob").value;
+  detail[i].gender = document.getElementById("egender").value;
+  detail[i].hq = document.getElementById("ehq").value;
+
+  displayData();
+
+  document.getElementById("edittable").style.display = "none";
+};
+		
+		</script>
+
+			</div>
+		</form>
+	</div>
+
+	
+</body>
+
+</html>
